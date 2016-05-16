@@ -1,0 +1,82 @@
+using UnityEngine;
+using System.Collections;
+
+public class Touch : MonoBehaviour {
+
+	private Vector2 mousePosition;
+	private Vector2 markPosition;
+
+	public bool shootMode = false;
+
+	private float blubSpeed = 100.0f;
+
+	public static bool markPlaced = false;
+	public float markTimer = 0.2f;
+
+	public Transform mark;
+	public Transform arrow;
+
+	void Awake()
+	{
+		shootMode = true;
+	}
+
+	void Update()
+	{
+		mousePosition = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
+		mousePosition = Camera.main.ScreenToWorldPoint(mousePosition);
+
+		//Choose your mark!
+		if (markPlaced == false && shootMode == true) 
+		{
+			markTimer -= Time.deltaTime;
+
+			if (markTimer <= 0) 
+			{
+				ChooseMark ();
+			} 
+
+			if (markTimer <= -0.2f) 
+			{
+				markTimer = -0.2f;
+			}
+		}
+
+		//Draw an arrow to the pointed location from the player
+	}
+
+	void OnMouseDown()
+	{
+		if (markPlaced == true) 
+		{
+			markPosition = new Vector2 (GameObject.FindGameObjectWithTag("Mark").transform.position.x, GameObject.FindGameObjectWithTag("Mark").transform.position.y);
+			gameObject.GetComponent<Rigidbody2D> ().AddForce (markPosition * blubSpeed);
+			
+			Destroy (GameObject.FindGameObjectWithTag ("Mark"));
+			Touch.markPlaced = false;
+		}
+	}
+
+	void ChooseMark()
+	{
+		//choose one position, remove the other one when another position has been placed
+		if (Input.GetMouseButton (0))
+		{
+			Instantiate (mark, mousePosition, Quaternion.identity);
+			markPlaced = true;
+			markTimer = 0.2f;
+		}
+	}
+}
+
+using UnityEngine;
+using System.Collections;
+
+public class Mark : MonoBehaviour {
+
+	void OnMouseDown() 
+	{
+		Destroy (gameObject);
+		Touch.markPlaced = false;
+	}
+}

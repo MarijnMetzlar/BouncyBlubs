@@ -1,0 +1,23 @@
+speed implementation
+
+//speed of the player
+		if (Sling.playerDistance > 2.0f && Sling.playerDistance > 1.5f) 
+		{
+			blubSpeed = 300.0f;
+		}
+
+		else if (Sling.playerDistance > 0.75f && Sling.playerDistance < 1.5f) 
+		{
+			blubSpeed = 200.0f;
+		}
+
+		else if (Sling.playerDistance > 0.5f && Sling.playerDistance > 0.75f) 
+		{
+			blubSpeed = 100.0f;
+		}
+
+		else if (Sling.playerDistance < 0.5f) 
+		{
+			blubSpeed = 50.0f;
+		}
+
