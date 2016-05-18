@@ -7,6 +7,7 @@ public class Player : MonoBehaviour {
 	public static bool activeLerp;
 
 	public GameObject paint;
+	public bool dropPaintNow = false;
 	public static int amountOfPaint;
 
 	void Start()
@@ -24,14 +25,35 @@ public class Player : MonoBehaviour {
 
 	void DropPaint()
 	{
-		Instantiate (paint, transform.position, Quaternion.identity);
-		if (amountOfPaint <= 0) {
+		//change the dropPaintNow boolean to true or false
+		if (gameObject.GetComponent<Rigidbody2D> ().velocity.magnitude > 0.75f)
+		{
+			dropPaintNow = true;
+		}
+
+		else
+		{
+			dropPaintNow = false;
+		}
+
+		//if dropPaintNow = true, drop paint, and reduce amountOfPaint
+		if (dropPaintNow == true) 
+		{
+			Instantiate (paint, transform.position, Quaternion.identity);
+			amountOfPaint -= 1;
+		}
+
+		else 
+		{
+			amountOfPaint -= 0;
+		}
+
+		if (amountOfPaint <= 0) 
+		{
 			blubColor = 0;
 			gameObject.GetComponent<SpriteRenderer> ().color = Color.white;
 			paint.GetComponent<SpriteRenderer> ().color = Color.white;
 			amountOfPaint = 0;
-		} else {
-			amountOfPaint -= 1;
 		}
 	}
 
