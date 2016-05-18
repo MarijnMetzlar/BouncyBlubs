@@ -6,6 +6,11 @@ public class Player : MonoBehaviour {
 	public static int blubColor;
 	public static bool activeLerp;
 
+	public static int BLUE = 1;
+	public static int RED = 2;
+	public static int YELLOW = 3;
+	public static int GREEN = 4;
+
 	public GameObject paint;
 	public bool dropPaintNow = false;
 	public static int amountOfPaint;

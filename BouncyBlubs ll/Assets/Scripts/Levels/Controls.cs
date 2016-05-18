@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 
 public class Controls : MonoBehaviour {
@@ -39,6 +40,8 @@ public class Controls : MonoBehaviour {
 	public static bool completedLevel3 = false;
 	public static bool completedLevel4 = false;
 	public static bool completedLevel5 = false;
+
+	public List<ColorChip> colorChips;
 
 	void Start()
 	{
@@ -179,40 +182,28 @@ public class Controls : MonoBehaviour {
 	//CompleteScreen
 	void ShowScoreScreen()
 	{
-		score = WhiteBlueFloor.blueCorrect + WhiteGreenFloor.greenCorrect + WhiteRedFloor.redCorrect + WhiteYellowFloor.yellowCorrect;
+		score = 0;
+		foreach (var chip in colorChips) {
+			if (chip.IsCorrect)
+				score++;
+		}
 
-		if (score == winningScore) 
-		{
+		if (score == winningScore) {
 			winningTimer -= Time.deltaTime;
-			if (winningTimer < 0) 
-			{
-				if (score == winningScore)
-				{
+			if (winningTimer < 0) {
+				if (score == winningScore) {
 					scoreScreen.GetComponent<Canvas> ().enabled = true;
 					winningTimer = 1.0f;
 
-					if (Application.loadedLevel == 5) 
-					{
+					if (Application.loadedLevel == 5) {
 						completedLevel1 = true;
-					}
-
-					else if (Application.loadedLevel == 6) 
-					{
+					} else if (Application.loadedLevel == 6) {
 						completedLevel2 = true;
-					}
-
-					else if (Application.loadedLevel == 7) 
-					{
+					} else if (Application.loadedLevel == 7) {
 						completedLevel3 = true;
-					}
-
-					else if (Application.loadedLevel == 8) 
-					{
+					} else if (Application.loadedLevel == 8) {
 						completedLevel4 = true;
-					}
-
-					else if (Application.loadedLevel == 9) 
-					{
+					} else if (Application.loadedLevel == 9) {
 						completedLevel5 = true;
 					}
 				}
@@ -228,10 +219,6 @@ public class Controls : MonoBehaviour {
 	public void ReplayButton()
 	{
 		Application.LoadLevel (Application.loadedLevel);
-		WhiteBlueFloor.blueCorrect = 0;
-		WhiteRedFloor.redCorrect = 0;
-		WhiteYellowFloor.yellowCorrect = 0;
-		WhiteGreenFloor.greenCorrect = 0;
 		PowerUps.gotSpeed = false;
 		PowerUps.gotNoBounce = false;
 		PowerUps.gotGhost = false;
@@ -242,10 +229,6 @@ public class Controls : MonoBehaviour {
 	public void NextButton()
 	{
 		Application.LoadLevel (Application.loadedLevel + 1);
-		WhiteBlueFloor.blueCorrect = 0;
-		WhiteRedFloor.redCorrect = 0;
-		WhiteYellowFloor.yellowCorrect = 0;
-		WhiteGreenFloor.greenCorrect = 0;
 		PowerUps.gotSpeed = false;
 		PowerUps.gotNoBounce = false;
 		PowerUps.gotGhost = false;
@@ -259,10 +242,6 @@ public class Controls : MonoBehaviour {
 	public void MenuButton()
 	{
 		Application.LoadLevel (1);
-		WhiteBlueFloor.blueCorrect = 0;
-		WhiteRedFloor.redCorrect = 0;
-		WhiteYellowFloor.yellowCorrect = 0;
-		WhiteGreenFloor.greenCorrect = 0;
 		PowerUps.gotSpeed = false;
 		PowerUps.gotNoBounce = false;
 		PowerUps.gotGhost = false;
