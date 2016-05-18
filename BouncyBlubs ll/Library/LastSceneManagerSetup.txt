@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/Levels/#10 Wonky Walls.unity
+- path: Assets/Scenes/Levels/#8 - SpinGlass.unity
   isLoaded: 1
   isActive: 1
