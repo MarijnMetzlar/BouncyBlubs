@@ -10,32 +10,32 @@ public class StartLevels : MonoBehaviour {
 	{
 		if (LevelType == 1) 
 		{
-			Application.LoadLevel (5);
+			Application.LoadLevel (3);
 		}
 
 		if (LevelType == 2 && Controls.completedLevel1 == true) 
 		{
-			Application.LoadLevel (6);
+			Application.LoadLevel (4);
 		}
 
 		if (LevelType == 3 && Controls.completedLevel2 == true) 
 		{
-			Application.LoadLevel (7);
+			Application.LoadLevel (5);
 		}
 
 		if (LevelType == 4 && Controls.completedLevel3 == true) 
 		{
-			Application.LoadLevel (8);
+			Application.LoadLevel (6);
 		}
 
 		if (LevelType == 5 && Controls.completedLevel4 == true) 
 		{
-			Application.LoadLevel (9);
+			Application.LoadLevel (7);
 		}
 
 		if (LevelType == 6 && Controls.completedLevel5 == true) 
 		{
-			Application.LoadLevel (10);
+			Application.LoadLevel (8);
 		}
 	}
 }

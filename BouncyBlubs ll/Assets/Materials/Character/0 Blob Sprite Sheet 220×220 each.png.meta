@@ -1,0 +1,998 @@
+fileFormatVersion: 2
+guid: c8de18c4fb9805941b33f743686d4eb5
+timeCreated: 1463993462
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: "0 Blob Sprite Sheet 220\xD7220 each_0"
+    21300002: "0 Blob Sprite Sheet 220\xD7220 each_1"
+    21300004: "0 Blob Sprite Sheet 220\xD7220 each_2"
+    21300006: "0 Blob Sprite Sheet 220\xD7220 each_3"
+    21300008: "0 Blob Sprite Sheet 220\xD7220 each_4"
+    21300010: "0 Blob Sprite Sheet 220\xD7220 each_5"
+    21300012: "0 Blob Sprite Sheet 220\xD7220 each_6"
+    21300014: "0 Blob Sprite Sheet 220\xD7220 each_7"
+    21300016: "0 Blob Sprite Sheet 220\xD7220 each_8"
+    21300018: "0 Blob Sprite Sheet 220\xD7220 each_9"
+    21300020: "0 Blob Sprite Sheet 220\xD7220 each_10"
+    21300022: "0 Blob Sprite Sheet 220\xD7220 each_11"
+    21300024: "0 Blob Sprite Sheet 220\xD7220 each_12"
+    21300026: "0 Blob Sprite Sheet 220\xD7220 each_13"
+    21300028: "0 Blob Sprite Sheet 220\xD7220 each_14"
+    21300030: "0 Blob Sprite Sheet 220\xD7220 each_15"
+    21300032: "0 Blob Sprite Sheet 220\xD7220 each_16"
+    21300034: "0 Blob Sprite Sheet 220\xD7220 each_17"
+    21300036: "0 Blob Sprite Sheet 220\xD7220 each_18"
+    21300038: "0 Blob Sprite Sheet 220\xD7220 each_19"
+    21300040: "0 Blob Sprite Sheet 220\xD7220 each_20"
+    21300042: "0 Blob Sprite Sheet 220\xD7220 each_21"
+    21300044: "0 Blob Sprite Sheet 220\xD7220 each_22"
+    21300046: "0 Blob Sprite Sheet 220\xD7220 each_23"
+    21300048: "0 Blob Sprite Sheet 220\xD7220 each_24"
+    21300050: "0 Blob Sprite Sheet 220\xD7220 each_25"
+    21300052: "0 Blob Sprite Sheet 220\xD7220 each_26"
+    21300054: "0 Blob Sprite Sheet 220\xD7220 each_27"
+    21300056: "0 Blob Sprite Sheet 220\xD7220 each_28"
+    21300058: "0 Blob Sprite Sheet 220\xD7220 each_29"
+    21300060: "0 Blob Sprite Sheet 220\xD7220 each_30"
+    21300062: "0 Blob Sprite Sheet 220\xD7220 each_31"
+    21300064: "0 Blob Sprite Sheet 220\xD7220 each_32"
+    21300066: "0 Blob Sprite Sheet 220\xD7220 each_33"
+    21300068: "0 Blob Sprite Sheet 220\xD7220 each_34"
+    21300070: "0 Blob Sprite Sheet 220\xD7220 each_35"
+    21300072: "0 Blob Sprite Sheet 220\xD7220 each_36"
+    21300074: "0 Blob Sprite Sheet 220\xD7220 each_37"
+    21300076: "0 Blob Sprite Sheet 220\xD7220 each_38"
+    21300078: "0 Blob Sprite Sheet 220\xD7220 each_39"
+    21300080: "0 Blob Sprite Sheet 220\xD7220 each_40"
+    21300082: "0 Blob Sprite Sheet 220\xD7220 each_41"
+    21300084: "0 Blob Sprite Sheet 220\xD7220 each_42"
+    21300086: "0 Blob Sprite Sheet 220\xD7220 each_43"
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: "0 Blob Sprite Sheet 220\xD7220 each_0"
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1100
+        width: 220
+        height: 220
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -38, y: 77}
+        - {x: -73, y: 70}
+        - {x: -77, y: 58}
+        - {x: -77, y: -49}
+        - {x: -56, y: -77}
+        - {x: 36, y: -77}
+        - {x: 77, y: -61}
+        - {x: 77, y: 36}
+        - {x: 42, y: 77}
+    - name: "0 Blob Sprite Sheet 220\xD7220 each_1"
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 1100
+        width: 220
+        height: 220
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -38, y: 77}
+        - {x: -73, y: 70}
+        - {x: -77, y: 58}
+        - {x: -77, y: -49}
+        - {x: -56, y: -77}
+        - {x: 36, y: -77}
+        - {x: 77, y: -61}
+        - {x: 77, y: 36}
+        - {x: 42, y: 77}
+    - name: "0 Blob Sprite Sheet 220\xD7220 each_2"
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 1100
+        width: 220
+        height: 220
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 34, y: 68}
+        - {x: -54, y: 68}
+        - {x: -87, y: 46}
+        - {x: -87, y: -63}
+        - {x: -86, y: -68}
+        - {x: 75, y: -68}
+        - {x: 87, y: -57}
+        - {x: 87, y: 49}
+        - {x: 86, y: 57}
+    - name: "0 Blob Sprite Sheet 220\xD7220 each_3"
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 1100
+        width: 220
+        height: 220
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -68, y: 87}
+        - {x: -68, y: -56}
+        - {x: -53, y: -87}
+        - {x: 48, y: -87}
+        - {x: 68, y: -77}
+        - {x: 68, y: 80}
+        - {x: 66, y: 87}
+    - name: "0 Blob Sprite Sheet 220\xD7220 each_4"
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 1100
+        width: 220
+        height: 220
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -38, y: 77}
+        - {x: -73, y: 70}
+        - {x: -77, y: 58}
+        - {x: -77, y: -49}
+        - {x: -56, y: -77}
+        - {x: 36, y: -77}
+        - {x: 77, y: -61}
+        - {x: 77, y: 36}
+        - {x: 42, y: 77}
+    - name: "0 Blob Sprite Sheet 220\xD7220 each_5"
+      rect:
+        serializedVersion: 2
+        x: 1100
+        y: 1100
+        width: 220
+        height: 220
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -38, y: 77}
+        - {x: -73, y: 70}
+        - {x: -77, y: 58}
+        - {x: -77, y: -49}
+        - {x: -56, y: -77}
+        - {x: 36, y: -77}
+        - {x: 77, y: -61}
+        - {x: 77, y: 36}
+        - {x: 42, y: 77}
+    - name: "0 Blob Sprite Sheet 220\xD7220 each_6"
+      rect:
+        serializedVersion: 2
+        x: 1320
+        y: 1100
+        width: 220
+        height: 220
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -38, y: 77}
+        - {x: -73, y: 70}
+        - {x: -77, y: 58}
+        - {x: -77, y: -49}
+        - {x: -56, y: -77}
+        - {x: 36, y: -77}
+        - {x: 77, y: -61}
+        - {x: 77, y: 36}
+        - {x: 42, y: 77}
+    - name: "0 Blob Sprite Sheet 220\xD7220 each_7"
+      rect:
+        serializedVersion: 2
+        x: 1540
+        y: 1100
+        width: 220
+        height: 220
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -38, y: 77}
+        - {x: -73, y: 70}
+        - {x: -77, y: 58}
+        - {x: -77, y: -49}
+        - {x: -56, y: -77}
+        - {x: 36, y: -77}
+        - {x: 77, y: -61}
+        - {x: 77, y: 36}
+        - {x: 42, y: 77}
+    - name: "0 Blob Sprite Sheet 220\xD7220 each_8"
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 880
+        width: 220
+        height: 220
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -38, y: 77}
+        - {x: -73, y: 70}
+        - {x: -77, y: 58}
+        - {x: -77, y: -49}
+        - {x: -56, y: -77}
+        - {x: 36, y: -77}
+        - {x: 77, y: -61}
+        - {x: 77, y: 36}
+        - {x: 42, y: 77}
+    - name: "0 Blob Sprite Sheet 220\xD7220 each_9"
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 880
+        width: 220
+        height: 220
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -38, y: 77}
+        - {x: -73, y: 70}
+        - {x: -77, y: 58}
+        - {x: -77, y: -49}
+        - {x: -56, y: -77}
+        - {x: 36, y: -77}
+        - {x: 77, y: -61}
+        - {x: 77, y: 36}
+        - {x: 42, y: 77}
+    - name: "0 Blob Sprite Sheet 220\xD7220 each_10"
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 880
+        width: 220
+        height: 220
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -38, y: 77}
+        - {x: -73, y: 70}
+        - {x: -77, y: 58}
+        - {x: -77, y: -49}
+        - {x: -56, y: -77}
+        - {x: 36, y: -77}
+        - {x: 77, y: -61}
+        - {x: 77, y: 36}
+        - {x: 42, y: 77}
+    - name: "0 Blob Sprite Sheet 220\xD7220 each_11"
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 880
+        width: 220
+        height: 220
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -38, y: 77}
+        - {x: -73, y: 70}
+        - {x: -77, y: 58}
+        - {x: -77, y: -49}
+        - {x: -56, y: -77}
+        - {x: 36, y: -77}
+        - {x: 77, y: -61}
+        - {x: 77, y: 36}
+        - {x: 42, y: 77}
+    - name: "0 Blob Sprite Sheet 220\xD7220 each_12"
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 880
+        width: 220
+        height: 220
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -38, y: 77}
+        - {x: -73, y: 70}
+        - {x: -77, y: 58}
+        - {x: -77, y: -49}
+        - {x: -56, y: -77}
+        - {x: 36, y: -77}
+        - {x: 77, y: -61}
+        - {x: 77, y: 36}
+        - {x: 42, y: 77}
+    - name: "0 Blob Sprite Sheet 220\xD7220 each_13"
+      rect:
+        serializedVersion: 2
+        x: 1100
+        y: 880
+        width: 220
+        height: 220
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -38, y: 77}
+        - {x: -73, y: 70}
+        - {x: -77, y: 58}
+        - {x: -77, y: -49}
+        - {x: -56, y: -77}
+        - {x: 36, y: -77}
+        - {x: 77, y: -61}
+        - {x: 77, y: 36}
+        - {x: 42, y: 77}
+    - name: "0 Blob Sprite Sheet 220\xD7220 each_14"
+      rect:
+        serializedVersion: 2
+        x: 1320
+        y: 880
+        width: 220
+        height: 220
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 41, y: 67}
+        - {x: -57, y: 67}
+        - {x: -89, y: 31}
+        - {x: -89, y: -29}
+        - {x: -54, y: -67}
+        - {x: 64, y: -67}
+        - {x: 77, y: -64}
+        - {x: 89, y: -20}
+        - {x: 89, y: 32}
+        - {x: 75, y: 63}
+    - name: "0 Blob Sprite Sheet 220\xD7220 each_15"
+      rect:
+        serializedVersion: 2
+        x: 1540
+        y: 880
+        width: 220
+        height: 220
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -44, y: 62}
+        - {x: -96, y: 33}
+        - {x: -96, y: -31}
+        - {x: -47, y: -62}
+        - {x: 59, y: -62}
+        - {x: 96, y: -28}
+        - {x: 96, y: 28}
+        - {x: 52, y: 62}
+    - name: "0 Blob Sprite Sheet 220\xD7220 each_16"
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 660
+        width: 220
+        height: 220
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 35, y: 90}
+        - {x: -40, y: 90}
+        - {x: -58, y: 83}
+        - {x: -66, y: 65}
+        - {x: -66, y: -71}
+        - {x: -37, y: -90}
+        - {x: 44, y: -90}
+        - {x: 55, y: -73}
+        - {x: 66, y: -46}
+        - {x: 66, y: 55}
+    - name: "0 Blob Sprite Sheet 220\xD7220 each_17"
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 660
+        width: 220
+        height: 220
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -37, y: 77}
+        - {x: -70, y: 67}
+        - {x: -77, y: 18}
+        - {x: -77, y: -37}
+        - {x: -56, y: -77}
+        - {x: 50, y: -77}
+        - {x: 77, y: -34}
+        - {x: 77, y: 32}
+        - {x: 45, y: 77}
+    - name: "0 Blob Sprite Sheet 220\xD7220 each_18"
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 660
+        width: 220
+        height: 220
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -38, y: 77}
+        - {x: -73, y: 70}
+        - {x: -77, y: 58}
+        - {x: -77, y: -49}
+        - {x: -56, y: -77}
+        - {x: 36, y: -77}
+        - {x: 77, y: -61}
+        - {x: 77, y: 36}
+        - {x: 42, y: 77}
+    - name: "0 Blob Sprite Sheet 220\xD7220 each_19"
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 660
+        width: 220
+        height: 220
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -38, y: 77}
+        - {x: -73, y: 70}
+        - {x: -77, y: 58}
+        - {x: -77, y: -49}
+        - {x: -56, y: -77}
+        - {x: 36, y: -77}
+        - {x: 77, y: -61}
+        - {x: 77, y: 36}
+        - {x: 42, y: 77}
+    - name: "0 Blob Sprite Sheet 220\xD7220 each_20"
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 660
+        width: 220
+        height: 220
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -38, y: 77}
+        - {x: -73, y: 70}
+        - {x: -77, y: 58}
+        - {x: -77, y: -49}
+        - {x: -56, y: -77}
+        - {x: 36, y: -77}
+        - {x: 77, y: -61}
+        - {x: 77, y: 36}
+        - {x: 42, y: 77}
+    - name: "0 Blob Sprite Sheet 220\xD7220 each_21"
+      rect:
+        serializedVersion: 2
+        x: 1100
+        y: 660
+        width: 220
+        height: 220
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -38, y: 77}
+        - {x: -73, y: 70}
+        - {x: -77, y: 58}
+        - {x: -77, y: -49}
+        - {x: -56, y: -77}
+        - {x: 36, y: -77}
+        - {x: 77, y: -61}
+        - {x: 77, y: 36}
+        - {x: 42, y: 77}
+    - name: "0 Blob Sprite Sheet 220\xD7220 each_22"
+      rect:
+        serializedVersion: 2
+        x: 1320
+        y: 660
+        width: 220
+        height: 220
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -38, y: 77}
+        - {x: -73, y: 70}
+        - {x: -77, y: 58}
+        - {x: -77, y: -49}
+        - {x: -56, y: -77}
+        - {x: 36, y: -77}
+        - {x: 77, y: -61}
+        - {x: 77, y: 36}
+        - {x: 42, y: 77}
+    - name: "0 Blob Sprite Sheet 220\xD7220 each_23"
+      rect:
+        serializedVersion: 2
+        x: 1540
+        y: 660
+        width: 220
+        height: 220
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -38, y: 77}
+        - {x: -73, y: 70}
+        - {x: -77, y: 58}
+        - {x: -77, y: -49}
+        - {x: -56, y: -77}
+        - {x: 36, y: -77}
+        - {x: 77, y: -61}
+        - {x: 77, y: 36}
+        - {x: 42, y: 77}
+    - name: "0 Blob Sprite Sheet 220\xD7220 each_24"
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 440
+        width: 220
+        height: 220
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -38, y: 77}
+        - {x: -73, y: 70}
+        - {x: -77, y: 58}
+        - {x: -77, y: -49}
+        - {x: -56, y: -77}
+        - {x: 36, y: -77}
+        - {x: 77, y: -61}
+        - {x: 77, y: 36}
+        - {x: 42, y: 77}
+    - name: "0 Blob Sprite Sheet 220\xD7220 each_25"
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 440
+        width: 220
+        height: 220
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -38, y: 77}
+        - {x: -73, y: 70}
+        - {x: -77, y: 58}
+        - {x: -77, y: -49}
+        - {x: -56, y: -77}
+        - {x: 36, y: -77}
+        - {x: 77, y: -61}
+        - {x: 77, y: 36}
+        - {x: 42, y: 77}
+    - name: "0 Blob Sprite Sheet 220\xD7220 each_26"
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 440
+        width: 220
+        height: 220
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -37, y: 72}
+        - {x: -82, y: 42}
+        - {x: -82, y: -30}
+        - {x: -73, y: -43}
+        - {x: -43, y: -72}
+        - {x: 53, y: -72}
+        - {x: 82, y: -53}
+        - {x: 82, y: 43}
+        - {x: 66, y: 72}
+    - name: "0 Blob Sprite Sheet 220\xD7220 each_27"
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 440
+        width: 220
+        height: 220
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 41, y: 67}
+        - {x: -57, y: 67}
+        - {x: -89, y: 31}
+        - {x: -89, y: -29}
+        - {x: -54, y: -67}
+        - {x: 64, y: -67}
+        - {x: 77, y: -64}
+        - {x: 89, y: -20}
+        - {x: 89, y: 32}
+        - {x: 75, y: 63}
+    - name: "0 Blob Sprite Sheet 220\xD7220 each_28"
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 440
+        width: 220
+        height: 220
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -27, y: 82}
+        - {x: -56, y: 58}
+        - {x: -71, y: 29}
+        - {x: -72, y: 21}
+        - {x: -72, y: -26}
+        - {x: -70, y: -36}
+        - {x: -43, y: -72}
+        - {x: -26, y: -82}
+        - {x: 41, y: -82}
+        - {x: 72, y: -52}
+        - {x: 72, y: 49}
+        - {x: 33, y: 82}
+      - - {x: 57, y: 63}
+        - {x: 60, y: 65}
+        - {x: 58, y: 70}
+        - {x: 55, y: 70}
+        - {x: 54, y: 67}
+    - name: "0 Blob Sprite Sheet 220\xD7220 each_29"
+      rect:
+        serializedVersion: 2
+        x: 1100
+        y: 440
+        width: 220
+        height: 220
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -58, y: 89}
+        - {x: -67, y: 71}
+        - {x: -67, y: -54}
+        - {x: -31, y: -89}
+        - {x: 40, y: -89}
+        - {x: 67, y: -47}
+        - {x: 67, y: 85}
+        - {x: 51, y: 89}
+      - - {x: -63, y: 77}
+        - {x: -67, y: 68}
+        - {x: -65, y: 66}
+        - {x: -63, y: 66}
+        - {x: -59, y: 71}
+        - {x: -58, y: 76}
+        - {x: -60, y: 78}
+      - - {x: 50, y: 82}
+        - {x: 53, y: 79}
+        - {x: 56, y: 80}
+        - {x: 56, y: 82}
+        - {x: 53, y: 85}
+        - {x: 51, y: 85}
+    - name: "0 Blob Sprite Sheet 220\xD7220 each_30"
+      rect:
+        serializedVersion: 2
+        x: 1320
+        y: 440
+        width: 220
+        height: 220
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -38, y: 77}
+        - {x: -73, y: 70}
+        - {x: -77, y: 58}
+        - {x: -77, y: -49}
+        - {x: -56, y: -77}
+        - {x: 36, y: -77}
+        - {x: 77, y: -61}
+        - {x: 77, y: 36}
+        - {x: 42, y: 77}
+    - name: "0 Blob Sprite Sheet 220\xD7220 each_31"
+      rect:
+        serializedVersion: 2
+        x: 1540
+        y: 440
+        width: 220
+        height: 220
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -60, y: 79}
+        - {x: -75, y: 53}
+        - {x: -75, y: -66}
+        - {x: -49, y: -79}
+        - {x: 46, y: -79}
+        - {x: 75, y: -43}
+        - {x: 75, y: 60}
+        - {x: 47, y: 79}
+    - name: "0 Blob Sprite Sheet 220\xD7220 each_32"
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 220
+        width: 220
+        height: 220
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -38, y: 77}
+        - {x: -73, y: 70}
+        - {x: -77, y: 58}
+        - {x: -77, y: -49}
+        - {x: -56, y: -77}
+        - {x: 36, y: -77}
+        - {x: 77, y: -61}
+        - {x: 77, y: 36}
+        - {x: 42, y: 77}
+    - name: "0 Blob Sprite Sheet 220\xD7220 each_33"
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 220
+        width: 220
+        height: 220
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -78, y: 75}
+        - {x: -79, y: 72}
+        - {x: -79, y: -67}
+        - {x: -55, y: -75}
+        - {x: 64, y: -75}
+        - {x: 79, y: -35}
+        - {x: 79, y: 49}
+        - {x: 46, y: 75}
+    - name: "0 Blob Sprite Sheet 220\xD7220 each_34"
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 220
+        width: 220
+        height: 220
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -38, y: 77}
+        - {x: -73, y: 70}
+        - {x: -77, y: 58}
+        - {x: -77, y: -49}
+        - {x: -56, y: -77}
+        - {x: 36, y: -77}
+        - {x: 77, y: -61}
+        - {x: 77, y: 36}
+        - {x: 42, y: 77}
+    - name: "0 Blob Sprite Sheet 220\xD7220 each_35"
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 220
+        width: 220
+        height: 220
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -35, y: 92}
+        - {x: -65, y: 88}
+        - {x: -65, y: -92}
+        - {x: 46, y: -92}
+        - {x: 64, y: -76}
+        - {x: 64, y: 80}
+        - {x: 30, y: 92}
+    - name: "0 Blob Sprite Sheet 220\xD7220 each_36"
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 220
+        width: 220
+        height: 220
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -42, y: 107}
+        - {x: -56, y: 57}
+        - {x: -56, y: -61}
+        - {x: -27, y: -107}
+        - {x: 37, y: -107}
+        - {x: 55, y: -86}
+        - {x: 55, y: 77}
+        - {x: 42, y: 107}
+    - name: "0 Blob Sprite Sheet 220\xD7220 each_37"
+      rect:
+        serializedVersion: 2
+        x: 1100
+        y: 220
+        width: 220
+        height: 220
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -22, y: 110}
+        - {x: -51, y: 73}
+        - {x: -53, y: 67}
+        - {x: -53, y: -103}
+        - {x: -42, y: -110}
+        - {x: 45, y: -110}
+        - {x: 53, y: -80}
+        - {x: 53, y: 96}
+        - {x: 29, y: 110}
+    - name: "0 Blob Sprite Sheet 220\xD7220 each_38"
+      rect:
+        serializedVersion: 2
+        x: 1320
+        y: 220
+        width: 220
+        height: 220
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -35, y: 92}
+        - {x: -65, y: 88}
+        - {x: -65, y: -92}
+        - {x: 46, y: -92}
+        - {x: 64, y: -76}
+        - {x: 64, y: 80}
+        - {x: 30, y: 92}
+    - name: "0 Blob Sprite Sheet 220\xD7220 each_39"
+      rect:
+        serializedVersion: 2
+        x: 1540
+        y: 220
+        width: 220
+        height: 220
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -42, y: 107}
+        - {x: -56, y: 57}
+        - {x: -56, y: -61}
+        - {x: -27, y: -107}
+        - {x: 37, y: -107}
+        - {x: 55, y: -86}
+        - {x: 55, y: 77}
+        - {x: 42, y: 107}
+      - - {x: 49, y: 105}
+        - {x: 52, y: 106}
+        - {x: 52, y: 109}
+        - {x: 49, y: 110}
+        - {x: 47, y: 108}
+    - name: "0 Blob Sprite Sheet 220\xD7220 each_40"
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 220
+        height: 220
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -22, y: 110}
+        - {x: -51, y: 73}
+        - {x: -53, y: 67}
+        - {x: -53, y: -103}
+        - {x: -42, y: -110}
+        - {x: 45, y: -110}
+        - {x: 53, y: -80}
+        - {x: 53, y: 96}
+        - {x: 29, y: 110}
+    - name: "0 Blob Sprite Sheet 220\xD7220 each_41"
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 0
+        width: 220
+        height: 220
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -78, y: 65}
+        - {x: -92, y: 40}
+        - {x: -92, y: -40}
+        - {x: -67, y: -64}
+        - {x: 59, y: -64}
+        - {x: 92, y: -49}
+        - {x: 92, y: 63}
+        - {x: 84, y: 65}
+    - name: "0 Blob Sprite Sheet 220\xD7220 each_42"
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 0
+        width: 220
+        height: 220
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 50, y: 56}
+        - {x: -69, y: 56}
+        - {x: -107, y: 29}
+        - {x: -107, y: -17}
+        - {x: -101, y: -39}
+        - {x: -59, y: -55}
+        - {x: 90, y: -55}
+        - {x: 107, y: -21}
+        - {x: 107, y: 30}
+        - {x: 85, y: 51}
+    - name: "0 Blob Sprite Sheet 220\xD7220 each_43"
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 0
+        width: 220
+        height: 220
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -52, y: 53}
+        - {x: -104, y: 39}
+        - {x: -110, y: 21}
+        - {x: -110, y: -45}
+        - {x: -106, y: -53}
+        - {x: 95, y: -53}
+        - {x: 110, y: -50}
+        - {x: 110, y: 28}
+        - {x: 59, y: 53}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
