@@ -26,11 +26,11 @@ public class Arrow : MonoBehaviour {
 
 	void ScaleObject ()
 	{
-		transform.localScale = new Vector3(2.0f * Sling.playerDistance, 2, 0);
+		transform.localScale = new Vector3(1f * Sling.playerDistance, 1.5f, 0);
 
 		if (Sling.playerDistance > 2.0f) 
 		{
-			transform.localScale = new Vector3(4, 2, 0);
+			transform.localScale = new Vector3(2, 1.5f, 0);
 		}
 	}
 
