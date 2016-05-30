@@ -15,10 +15,20 @@ public class Player : MonoBehaviour {
 	public bool dropPaintNow = false;
 	public static int amountOfPaint;
 
+	public string direction = null;
+	public string oldDirection;
+	public bool wallHit = false;
+	private float wallHitTimer = 0.5f;
+
+	private Rigidbody2D rigid;
+	private Animator anim;
+
 	void Start()
 	{
 		blubColor = 0;
 		paint.GetComponent<SpriteRenderer> ().color = Color.white;
+		rigid = GetComponent<Rigidbody2D> ();
+		anim = GetComponent<Animator> ();
 	}
 
 	void Update()
@@ -26,6 +36,90 @@ public class Player : MonoBehaviour {
 		DropPaint ();
 		Teleport ();
 		LerpPosition ();
+		CharacterAnimations ();
+
+		if (wallHit == true) {
+			wallHitTimer -= Time.deltaTime;
+			if (wallHitTimer < 0) {
+				wallHit = false;
+				wallHitTimer = 0.5f;
+			}
+		}
+	}
+
+	void CharacterAnimations()
+	{
+		Vector2 displacement = new Vector2(rigid.velocity.x + transform.position.x, rigid.velocity.y + transform.position.y);
+		float yDelta = displacement.y - transform.position.y;
+		float xDelta = displacement.x - transform.position.x;
+		float degrees = Mathf.Atan2 (yDelta, xDelta) * 180 / Mathf.PI;
+		degrees = degrees % 360;
+		if (degrees < 0) {
+			degrees = degrees + 360;
+		}
+
+		//up
+		if (degrees >= 45.0f && degrees < 135.0f) 
+		{
+			anim.SetBool ("Up", true);
+			anim.SetBool ("Down", false);
+			anim.SetBool ("Left", false);
+			anim.SetBool ("Right", false);
+
+			if (wallHit == true) {
+				anim.SetBool ("WallHit", wallHit);
+			} else {
+				anim.SetBool ("WallHit", false);
+			}
+		}
+
+		//left
+		if (degrees >= 135.0f && degrees < 225.0f) 
+		{
+			anim.SetBool ("Up", false);
+			anim.SetBool ("Down", false);
+			anim.SetBool ("Left", true);
+			anim.SetBool ("Right", false);
+
+			if (wallHit == true) {
+				anim.SetBool ("WallHit", wallHit);
+			} else {
+				anim.SetBool ("WallHit", false);
+			}
+		}
+
+		//down
+		if (degrees >= 225.0f && degrees < 315.0f) 
+		{
+			anim.SetBool ("Up", false);
+			anim.SetBool ("Down", true);
+			anim.SetBool ("Left", false);
+			anim.SetBool ("Right", false);
+
+			if (wallHit == true) {
+				anim.SetBool ("WallHit", wallHit);
+			} else {
+				anim.SetBool ("WallHit", false);
+			}
+		}
+
+		//right
+		if ((degrees >= 315.0f && degrees <= 360.0f) || (degrees >= 0 && degrees < 45)) 
+		{
+			anim.SetBool ("Up", false);
+			anim.SetBool ("Down", false);
+			anim.SetBool ("Left", false);
+			anim.SetBool ("Right", true);
+
+			if (wallHit == true) {
+				anim.SetBool ("WallHit", wallHit);
+			} else {
+				anim.SetBool ("WallHit", false);
+			}
+		}
+
+		anim.SetFloat ("Velocity", rigid.velocity.magnitude);
+
 	}
 
 	void DropPaint()
@@ -144,6 +238,11 @@ public class Player : MonoBehaviour {
 			paint.GetComponent<SpriteRenderer> ().color = Color.green;
 			blubColor = 4;
 			amountOfPaint = 300;
+		}
+
+		if (other.gameObject.tag == "Wall") 
+		{
+			wallHit = true;
 		}
 	}
 }
