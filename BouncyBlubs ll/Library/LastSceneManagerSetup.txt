@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/Levels/World1/#22 W1L10.unity
+- path: Assets/Scenes/Levels/#5 - Spinning.unity
   isLoaded: 1
   isActive: 1
