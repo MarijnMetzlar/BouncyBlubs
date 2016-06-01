@@ -17,6 +17,7 @@ public class World : MonoBehaviour {
 	public Canvas tutorialWorldScreen;
 	public Canvas world2Screen;
 	public Canvas world3Screen;
+	public Canvas itemScreen;
 	public Text worldText;
 	public Button lookAtWorld;
 
@@ -28,7 +29,6 @@ public class World : MonoBehaviour {
 		{
 			if (!Camera.main) 
 			{
-				Debug.Log ("well shit");
 				Destroy (this);
 				return;
 			}
@@ -79,18 +79,21 @@ public class World : MonoBehaviour {
 			tutorialWorldScreen.GetComponent<Canvas> ().enabled = true;
 			world2Screen.GetComponent<Canvas> ().enabled = false;
 			world3Screen.GetComponent<Canvas> ().enabled = false;
+			itemScreen.GetComponent<Canvas> ().enabled = false;
 			worldText.text = "World 1";
 			break;
 		case "World2":
 			tutorialWorldScreen.GetComponent<Canvas> ().enabled = false;
 			world2Screen.GetComponent<Canvas> ().enabled = true;
 			world3Screen.GetComponent<Canvas> ().enabled = false;
+			itemScreen.GetComponent<Canvas> ().enabled = false;
 			worldText.text = "World 2";
 			break;
 		case "World3":
 			tutorialWorldScreen.GetComponent<Canvas> ().enabled = false;
 			world2Screen.GetComponent<Canvas> ().enabled = false;
 			world3Screen.GetComponent<Canvas> ().enabled = true;
+			itemScreen.GetComponent<Canvas> ().enabled = false;
 			worldText.text = "World 3";
 			break;
 		default:
@@ -133,10 +136,10 @@ public class World : MonoBehaviour {
 
 		if (rotateToWorld1 == true) 
 		{
-			gameObject.GetComponent<Transform> ().rotation = Quaternion.RotateTowards (transform.rotation, Quaternion.Euler (10.24224f, 352.8783f, 17.87624f), step);
+			gameObject.GetComponent<Transform> ().rotation = Quaternion.RotateTowards (transform.rotation, Quaternion.Euler (23.99408f, 339.8715f, 13.68707f), step);
 		}
 
-		if (gameObject.transform.rotation == Quaternion.Euler (10.24224f, 352.8783f, 17.87624f)) 
+		if (gameObject.transform.rotation == Quaternion.Euler (23.99408f, 339.8715f, 13.68707f)) 
 		{
 			rotateToWorld1 = false;
 		}
@@ -164,16 +167,32 @@ public class World : MonoBehaviour {
 
 	public void ZoomTutorialWorld()
 	{
-		Application.LoadLevel (2);
+		SceneManager.LoadScene (sceneBuildIndex: 2);
 	}
 
 	public void ZoomWorld2()
 	{
-		Application.LoadLevel (3);
+		Debug.Log ("You clicked world 2");
+		//SceneManager.LoadScene (sceneBuildIndex: 2);
 	}
 
 	public void ZoomWorld3()
 	{
-		Application.LoadLevel (4);
+		Debug.Log ("You clicked world 3");
+		//SceneManager.LoadScene (sceneBuildIndex: 3);
+	}
+
+	//ItemScreen functions
+	public void ItemScreen()
+	{
+		tutorialWorldScreen.GetComponent<Canvas> ().enabled = false;
+		world2Screen.GetComponent<Canvas> ().enabled = false;
+		world3Screen.GetComponent<Canvas> ().enabled = false;
+		itemScreen.GetComponent<Canvas> ().enabled = true;
+	}
+
+	public void ItemBackButton()
+	{
+		itemScreen.GetComponent<Canvas> ().enabled = false;
 	}
 }

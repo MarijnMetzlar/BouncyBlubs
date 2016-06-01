@@ -1,4 +1,8 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/Scenes/Levels/#5 - Spinning.unity
+=======
+- path: Assets/Scenes/OverWorld.unity
+>>>>>>> fa7f8ca5fbf54e38c718eef4ae55b5402064c622
   isLoaded: 1
   isActive: 1
