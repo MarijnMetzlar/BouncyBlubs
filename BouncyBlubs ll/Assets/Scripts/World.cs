@@ -79,21 +79,18 @@ public class World : MonoBehaviour {
 			tutorialWorldScreen.GetComponent<Canvas> ().enabled = true;
 			world2Screen.GetComponent<Canvas> ().enabled = false;
 			world3Screen.GetComponent<Canvas> ().enabled = false;
-			itemScreen.GetComponent<Canvas> ().enabled = false;
 			worldText.text = "World 1";
 			break;
 		case "World2":
 			tutorialWorldScreen.GetComponent<Canvas> ().enabled = false;
 			world2Screen.GetComponent<Canvas> ().enabled = true;
 			world3Screen.GetComponent<Canvas> ().enabled = false;
-			itemScreen.GetComponent<Canvas> ().enabled = false;
 			worldText.text = "World 2";
 			break;
 		case "World3":
 			tutorialWorldScreen.GetComponent<Canvas> ().enabled = false;
 			world2Screen.GetComponent<Canvas> ().enabled = false;
 			world3Screen.GetComponent<Canvas> ().enabled = true;
-			itemScreen.GetComponent<Canvas> ().enabled = false;
 			worldText.text = "World 3";
 			break;
 		default:
@@ -188,11 +185,13 @@ public class World : MonoBehaviour {
 		tutorialWorldScreen.GetComponent<Canvas> ().enabled = false;
 		world2Screen.GetComponent<Canvas> ().enabled = false;
 		world3Screen.GetComponent<Canvas> ().enabled = false;
+		overWorld.SetActive (false);
 		itemScreen.GetComponent<Canvas> ().enabled = true;
 	}
 
 	public void ItemBackButton()
 	{
+		overWorld.SetActive (true);
 		itemScreen.GetComponent<Canvas> ().enabled = false;
 	}
 }
