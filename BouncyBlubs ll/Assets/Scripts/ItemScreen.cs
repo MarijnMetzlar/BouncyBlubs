@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 public class ItemScreen : MonoBehaviour {
 
-	public static int itemNr;
+	public static int itemNr = 0;
 	public GameObject hat;
 	public Sprite none;
 	public Sprite devilItem;
