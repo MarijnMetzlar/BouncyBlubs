@@ -72,37 +72,37 @@ public class Player : MonoBehaviour {
 		}
 		if (ItemScreen.itemNr == 1) {
 			hat.GetComponent<SpriteRenderer> ().sprite = devilItem;
-			hat.GetComponent<Transform> ().localPosition = new Vector3 (0.0f, 0.65f, 0.0f);
+			hat.GetComponent<Transform> ().localPosition = new Vector3 (0.0f, 0.84f, 0.0f);
 			hat.GetComponent<Transform> ().localScale = new Vector3 (1.0f, 1.0f, 1.0f);
 		}
 		if (ItemScreen.itemNr == 2) {
 			hat.GetComponent<SpriteRenderer> ().sprite = fezItem;
-			hat.GetComponent<Transform> ().localPosition = new Vector3 (0.0f, 0.7f, 0.0f);
+			hat.GetComponent<Transform> ().localPosition = new Vector3 (0.0f, 0.84f, 0.0f);
 			hat.GetComponent<Transform> ().localScale = new Vector3 (0.93f, 1.02f, 1.0f);
 		}
 		if (ItemScreen.itemNr == 3) {
 			hat.GetComponent<SpriteRenderer> ().sprite = haloItem;
-			hat.GetComponent<Transform> ().localPosition = new Vector3 (0.0f, 0.6f, 0.0f);
+			hat.GetComponent<Transform> ().localPosition = new Vector3 (0.0f, 0.75f, 0.0f);
 			hat.GetComponent<Transform> ().localScale = new Vector3 (0.93f, 1.02f, 1.0f);
 		}
 		if (ItemScreen.itemNr == 4) {
 			hat.GetComponent<SpriteRenderer> ().sprite = tophatItem;
-			hat.GetComponent<Transform> ().localPosition = new Vector3 (-0.15f, 0.675f, 0.0f);
+			hat.GetComponent<Transform> ().localPosition = new Vector3 (-0.15f, 0.84f, 0.0f);
 			hat.GetComponent<Transform> ().localScale = new Vector3 (0.93f, 1.02f, 1.0f);
 		}
 		if (ItemScreen.itemNr == 5) {
 			hat.GetComponent<SpriteRenderer> ().sprite = cakeHatItem;
-			hat.GetComponent<Transform> ().localPosition = new Vector3 (0.0f, 0.85f, 0.0f);
+			hat.GetComponent<Transform> ().localPosition = new Vector3 (0.0f, 1.1f, 0.0f);
 			hat.GetComponent<Transform> ().localScale = new Vector3 (0.74f, 0.74f, 0.74f);
 		}
 		if (ItemScreen.itemNr == 6) {
 			hat.GetComponent<SpriteRenderer> ().sprite = diamondCrownItem;
-			hat.GetComponent<Transform> ().localPosition = new Vector3 (0.0f, 0.8f, 0.0f);
+			hat.GetComponent<Transform> ().localPosition = new Vector3 (0.0f, 1.0f, 0.0f);
 			hat.GetComponent<Transform> ().localScale = new Vector3 (0.8f, 0.88f, 0.86f);
 		}
 		if (ItemScreen.itemNr == 7) {
 			hat.GetComponent<SpriteRenderer> ().sprite = goldenCrownItem;
-			hat.GetComponent<Transform> ().localPosition = new Vector3 (0.0f, 0.75f, 0.0f);
+			hat.GetComponent<Transform> ().localPosition = new Vector3 (0.0f, 0.95f, 0.0f);
 			hat.GetComponent<Transform> ().localScale = new Vector3 (0.8f, 0.88f, 0.86f);
 		}
 		if (ItemScreen.itemNr == 8) {
@@ -112,22 +112,22 @@ public class Player : MonoBehaviour {
 		}
 		if (ItemScreen.itemNr == 9) {
 			hat.GetComponent<SpriteRenderer> ().sprite = pirateHatItem;
-			hat.GetComponent<Transform> ().localPosition = new Vector3 (0.0f, 0.7f, 0.0f);
+			hat.GetComponent<Transform> ().localPosition = new Vector3 (0.0f, 0.9f, 0.0f);
 			hat.GetComponent<Transform> ().localScale = new Vector3 (1.0f, 1.0f, 1.0f);
 		}
 		if (ItemScreen.itemNr == 10) {
 			hat.GetComponent<SpriteRenderer> ().sprite = poopooHatItem;
-			hat.GetComponent<Transform> ().localPosition = new Vector3 (0.0f, 0.7f, 0.0f);
+			hat.GetComponent<Transform> ().localPosition = new Vector3 (0.0f, 0.95f, 0.0f);
 			hat.GetComponent<Transform> ().localScale = new Vector3 (1.0f, 1.0f, 1.0f);
 		}
 		if (ItemScreen.itemNr == 11) {
 			hat.GetComponent<SpriteRenderer> ().sprite = silverCrownItem;
-			hat.GetComponent<Transform> ().localPosition = new Vector3 (0.0f, 0.8f, 0.0f);
+			hat.GetComponent<Transform> ().localPosition = new Vector3 (0.0f, 1.0f, 0.0f);
 			hat.GetComponent<Transform> ().localScale = new Vector3 (0.8f, 0.88f, 0.86f);
 		}
 		if (ItemScreen.itemNr == 12) {
 			hat.GetComponent<SpriteRenderer> ().sprite = wizardHatItem;
-			hat.GetComponent<Transform> ().localPosition = new Vector3 (0.0f, 0.75f, 0.0f);
+			hat.GetComponent<Transform> ().localPosition = new Vector3 (0.0f, 0.95f, 0.0f);
 			hat.GetComponent<Transform> ().localScale = new Vector3 (1.0f, 1.0f, 1.0f);
 		}
 	}
