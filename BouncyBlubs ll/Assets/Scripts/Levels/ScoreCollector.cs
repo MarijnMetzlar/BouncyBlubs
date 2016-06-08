@@ -34,6 +34,8 @@ public class ScoreCollector : MonoBehaviour {
 	void Start ()
 	{
 		currentTime = maxTime;
+		Player.bounces = 0;
+		Controls.shots = 0;
 	}
 
 	void Update () 

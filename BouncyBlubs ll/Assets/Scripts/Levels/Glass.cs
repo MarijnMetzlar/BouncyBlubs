@@ -6,6 +6,8 @@ public class Glass : MonoBehaviour {
 	private bool destroyGlass = false;
 	private float destroyGlassTimer = 0.1f;
 
+	public float glassType;
+
 	void Update()
 	{
 		if (destroyGlass == true) {
@@ -22,7 +24,7 @@ public class Glass : MonoBehaviour {
 		{
 			Debug.Log (other.gameObject.GetComponent<Rigidbody2D> ().velocity.magnitude);
 
-			if (other.gameObject.GetComponent<Rigidbody2D> ().velocity.magnitude >= 10.0f) 
+			if (other.gameObject.GetComponent<Rigidbody2D> ().velocity.magnitude >= glassType) 
 			{
 				destroyGlass = true;
 			}
