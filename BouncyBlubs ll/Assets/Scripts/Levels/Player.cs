@@ -20,6 +20,9 @@ public class Player : MonoBehaviour {
 	public bool wallHit = false;
 	private float wallHitTimer = 0.5f;
 
+	public static int bounces;
+	public bool _triggered;
+
 	private Rigidbody2D rigid;
 	private Animator anim;
 
@@ -328,6 +331,19 @@ public class Player : MonoBehaviour {
 		if (other.gameObject.tag == "Wall") 
 		{
 			wallHit = true;
+		}
+	}
+
+	void OnTriggerExit2D(Collider2D other)
+	{
+		if (_triggered) {
+			_triggered = false;
+			return;
+		}
+
+		_triggered = true;
+		if (other.gameObject.tag == "Wall") {
+			bounces += 1;
 		}
 	}
 }
