@@ -50,8 +50,6 @@ public class Controls : MonoBehaviour {
 
 	void Start()
 	{
-		Debug.Log (Application.loadedLevel);
-
 		cam = Camera.main;
 		camStartPosition = cam.transform.localPosition;
 	}
