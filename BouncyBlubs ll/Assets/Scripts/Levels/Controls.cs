@@ -10,6 +10,9 @@ public class Controls : MonoBehaviour {
 
 	public bool shootMode = false;
 
+	public static bool startTimer;
+	public static int shots;
+
 	public static float blubSpeed;
 
 	public GameObject player;
@@ -22,6 +25,7 @@ public class Controls : MonoBehaviour {
 	public float winningTimer = 1.0f;
 	public int winningScore;
 	public int score = 0;
+	public GameObject theLevel;
 
 	public Canvas scoreScreen;
 	public Canvas quitScreen;
@@ -40,11 +44,14 @@ public class Controls : MonoBehaviour {
 	public static bool completedLevel3 = false;
 	public static bool completedLevel4 = false;
 	public static bool completedLevel5 = false;
+	public static bool completedLevel6 = false;
 
 	public List<ColorChip> colorChips;
 
 	void Start()
 	{
+		Debug.Log (Application.loadedLevel);
+
 		cam = Camera.main;
 		camStartPosition = cam.transform.localPosition;
 	}
@@ -114,6 +121,11 @@ public class Controls : MonoBehaviour {
 			Instantiate (arrow, transform.position, Quaternion.identity);
 		}
 
+		if (startTimer == false) 
+		{
+			startTimer = true;
+		}
+
 		//powerUps
 		if (PowerUps.gotGhost == true) 
 		{
@@ -126,6 +138,7 @@ public class Controls : MonoBehaviour {
 		slingPosition = new Vector2 (GameObject.FindGameObjectWithTag ("Sling").transform.position.x, GameObject.FindGameObjectWithTag ("Sling").transform.position.y);
 
 		makingCameraSmooth = 0;
+		shots += 1;
 
 		if (shootMode == true) 
 		{
@@ -193,25 +206,26 @@ public class Controls : MonoBehaviour {
 			if (winningTimer < 0) {
 				if (score == winningScore) {
 					scoreScreen.GetComponent<Canvas> ().enabled = true;
+					theLevel.SetActive (false);
+					startTimer = false;
 					winningTimer = 1.0f;
 
-					if (Application.loadedLevel == 5) {
+					if (Application.loadedLevel == 3) {
 						completedLevel1 = true;
-					} else if (Application.loadedLevel == 6) {
+					} else if (Application.loadedLevel == 4) {
 						completedLevel2 = true;
-					} else if (Application.loadedLevel == 7) {
+					} else if (Application.loadedLevel == 5) {
 						completedLevel3 = true;
-					} else if (Application.loadedLevel == 8) {
+					} else if (Application.loadedLevel == 6) {
 						completedLevel4 = true;
-					} else if (Application.loadedLevel == 9) {
+					} else if (Application.loadedLevel == 7) {
 						completedLevel5 = true;
+					} else if (Application.loadedLevel == 8) {
+						completedLevel6 = true;
 					}
 				}
 			}
-		} 
-
-		else 
-		{
+		} else {
 			winningTimer = 1.0f;
 		}
 	}
