@@ -60,11 +60,11 @@ public class ScoreCollector : MonoBehaviour {
 			totalScore = 0.0f;
 		}
 
-		totalScoreText.text = "\n" + "SCORE: " + totalScore.ToString("F1");
+		totalScoreText.text = "" + totalScore.ToString("F1");
 
-		remainingTimeText.text = "Time left: " + currentTime.ToString("F1") + " sec.";
-		bounceText.text = "Bounces: " + Player.bounces;
-		shotsText.text = "Shots: " + Controls.shots;
+		remainingTimeText.text = "" + currentTime.ToString("F1") + " sec.";
+		bounceText.text = "" + Player.bounces;
+		shotsText.text = "" + Controls.shots;
 
 		ShowStars ();
 	}
