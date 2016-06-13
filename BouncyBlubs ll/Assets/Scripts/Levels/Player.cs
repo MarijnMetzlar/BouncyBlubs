@@ -26,6 +26,14 @@ public class Player : MonoBehaviour {
 	private Rigidbody2D rigid;
 	private Animator anim;
 
+	private AudioSource allPlayerSounds;
+	private int randomNrBounce;
+	private int randomNrPaint;
+	public AudioClip bounceSound1;
+	public AudioClip bounceSound2;
+	public AudioClip bounceSound3;
+	public AudioClip gettingPaint;
+
 	public GameObject hat;
 	public Sprite none;
 	public Sprite devilItem;
@@ -47,6 +55,7 @@ public class Player : MonoBehaviour {
 		paint.GetComponent<SpriteRenderer> ().color = Color.white;
 		rigid = GetComponent<Rigidbody2D> ();
 		anim = GetComponent<Animator> ();
+		allPlayerSounds = GetComponent<AudioSource> ();
 		GetHat ();
 	}
 
@@ -298,6 +307,7 @@ public class Player : MonoBehaviour {
 	{
 		if (other.gameObject.tag == "BluePaint") 
 		{
+			allPlayerSounds.PlayOneShot (gettingPaint);
 			gameObject.GetComponent<SpriteRenderer> ().color = new Color (0.0f, 1.0f, 1.0f, 1.0f);
 			paint.GetComponent<SpriteRenderer> ().color = new Color (0.0f, 1.0f, 1.0f, 1.0f);
 			blubColor = 1;
@@ -306,6 +316,7 @@ public class Player : MonoBehaviour {
 
 		if (other.gameObject.tag == "RedPaint") 
 		{
+			allPlayerSounds.PlayOneShot (gettingPaint);
 			gameObject.GetComponent<SpriteRenderer> ().color = new Color (1.0f, 0.0f, 0.0f, 1.0f);
 			paint.GetComponent<SpriteRenderer> ().color = Color.red;
 			blubColor = 2;
@@ -314,6 +325,7 @@ public class Player : MonoBehaviour {
 
 		if (other.gameObject.tag == "YellowPaint") 
 		{
+			allPlayerSounds.PlayOneShot (gettingPaint);
 			gameObject.GetComponent<SpriteRenderer> ().color = Color.yellow;
 			paint.GetComponent<SpriteRenderer> ().color = Color.yellow;
 			blubColor = 3;
@@ -322,6 +334,7 @@ public class Player : MonoBehaviour {
 
 		if (other.gameObject.tag == "GreenPaint") 
 		{
+			allPlayerSounds.PlayOneShot (gettingPaint);
 			gameObject.GetComponent<SpriteRenderer> ().color = Color.green;
 			paint.GetComponent<SpriteRenderer> ().color = Color.green;
 			blubColor = 4;
@@ -331,6 +344,15 @@ public class Player : MonoBehaviour {
 		if (other.gameObject.tag == "Wall") 
 		{
 			wallHit = true;
+			randomNrBounce = Random.Range (0, 3);
+
+			if (randomNrBounce == 0) {
+				allPlayerSounds.PlayOneShot (bounceSound1);
+			} else if (randomNrBounce == 1) {
+				allPlayerSounds.PlayOneShot (bounceSound2);
+			} else if (randomNrBounce == 2) {
+				allPlayerSounds.PlayOneShot (bounceSound3);
+			}
 		}
 	}
 

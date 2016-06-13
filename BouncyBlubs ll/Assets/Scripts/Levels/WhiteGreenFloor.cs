@@ -7,6 +7,32 @@ public class WhiteGreenFloor : ColorChip {
 	public Sprite redGreenSquare;
 	public Sprite yellowGreenSquare;
 	public Sprite correctGreenSquare;
+	private AudioSource fillingSounds;
+	public AudioClip fillSound;
+
+	void Start()
+	{
+		fillingSounds = GetComponent<AudioSource> ();
+	}
+		
+	void OnTriggerEnter2D(Collider2D other)
+	{
+		if (other.gameObject.tag == "Player") 
+		{
+			if (Player.blubColor == Player.BLUE) {
+				fillingSounds.PlayOneShot (fillSound);
+			}
+			if (Player.blubColor == Player.RED) {
+				fillingSounds.PlayOneShot (fillSound);
+			}
+			if (Player.blubColor == Player.YELLOW) {
+				fillingSounds.PlayOneShot (fillSound);
+			}
+			if (Player.blubColor == Player.GREEN) {
+				fillingSounds.PlayOneShot (fillSound);
+			}
+		}
+	}
 
 	void OnTriggerStay2D(Collider2D other)
 	{
