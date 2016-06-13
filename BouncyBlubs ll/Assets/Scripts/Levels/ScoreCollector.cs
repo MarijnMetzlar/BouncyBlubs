@@ -71,31 +71,31 @@ public class ScoreCollector : MonoBehaviour {
 
 	void ShowStars()
 	{
-		if (totalScore > winOneStar) {
+		if (totalScore >= winOneStar) {
 			star1.GetComponent<Image> ().sprite = star;
 		} else {
 			star1.GetComponent<Image> ().sprite = emptyStar;
 		}
 
-		if (totalScore > winSecondStar) {
+		if (totalScore >= winSecondStar) {
 			star2.GetComponent<Image> ().sprite = star;
 		} else {
 			star2.GetComponent<Image> ().sprite = emptyStar;
 		}
 
-		if (totalScore > winThirdStar) {
+		if (totalScore >= winThirdStar) {
 			star3.GetComponent<Image> ().sprite = star;
 		} else {
 			star3.GetComponent<Image> ().sprite = emptyStar;
 		}
 
-		if (totalScore > winFourthStar) {
+		if (totalScore >= winFourthStar) {
 			star4.GetComponent<Image> ().sprite = star;
 		} else {
 			star4.GetComponent<Image> ().sprite = emptyStar;
 		}
 
-		if (totalScore > winFifthStar) {
+		if (totalScore >= winFifthStar) {
 			star5.GetComponent<Image> ().sprite = star;
 		} else {
 			star5.GetComponent<Image> ().sprite = emptyStar;
