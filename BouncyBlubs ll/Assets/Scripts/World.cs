@@ -23,6 +23,11 @@ public class World : MonoBehaviour {
 
 	public GameObject overWorld;
 
+	public GameObject worldBackGround;
+	private float changeTextureTimer = 0.15f;
+	private int textureNr = 0;
+	public Texture[] backGroundTextures;
+
 	void Start()
 	{
 		if (!referenceCamera) 
@@ -58,6 +63,7 @@ public class World : MonoBehaviour {
 		}
 
 		ClickOnWorlds ();
+		BackGround ();
 	}
 
 	void OnMouseDrag()
@@ -193,5 +199,21 @@ public class World : MonoBehaviour {
 	{
 		overWorld.SetActive (true);
 		itemScreen.GetComponent<Canvas> ().enabled = false;
+	}
+
+	void BackGround()
+	{
+		changeTextureTimer -= Time.deltaTime;
+		if (changeTextureTimer < 0) 
+		{
+			worldBackGround.GetComponent<Renderer>().material.mainTexture = backGroundTextures [textureNr];
+			textureNr += 1;
+			changeTextureTimer = 0.15f;
+
+			if (textureNr == 10) 
+			{
+				textureNr = 0;
+			}
+		}
 	}
 }

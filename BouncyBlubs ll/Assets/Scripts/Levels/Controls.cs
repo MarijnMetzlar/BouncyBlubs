@@ -28,7 +28,10 @@ public class Controls : MonoBehaviour {
 	public GameObject theLevel;
 
 	public Canvas scoreScreen;
+	public Canvas totalScreen;
 	public Canvas quitScreen;
+
+	public GameObject screenFader;
 
 	public Camera cam;
 	private Vector3 camStartPosition;
@@ -37,6 +40,11 @@ public class Controls : MonoBehaviour {
 
 	private float _timeStartedLerping;
 	private float timeTakenDuringLerp = 2.0f;
+
+	private bool startFadingNow = false;
+	private bool replayLevel = false;
+	private bool nextLevel = false;
+	private bool toWorld = false;
 
 	//for finding the completedLevels
 	public static bool completedLevel1 = false;
@@ -89,6 +97,11 @@ public class Controls : MonoBehaviour {
 			PowerUps.ghostPowerUpShots = 2;
 			Color oldColor = player.GetComponent<SpriteRenderer> ().color;
 			player.GetComponent<SpriteRenderer> ().color = new Color (oldColor.r, oldColor.g, oldColor.b, 1.0f);
+		}
+
+		if (startFadingNow == true) 
+		{
+			ClickedOnButton ();
 		}
 
 		LerpCamera ();
@@ -203,10 +216,13 @@ public class Controls : MonoBehaviour {
 			winningTimer -= Time.deltaTime;
 			if (winningTimer < 0) {
 				if (score == winningScore) {
-					scoreScreen.GetComponent<Canvas> ().enabled = true;
 					theLevel.SetActive (false);
 					startTimer = false;
 					winningTimer = 1.0f;
+
+					if (startFadingNow == false) {
+						scoreScreen.GetComponent<Canvas> ().enabled = true;
+					}
 
 					if (SceneManager.GetActiveScene ().buildIndex == 3) {
 						completedLevel1 = true;
@@ -230,37 +246,65 @@ public class Controls : MonoBehaviour {
 
 	public void ReplayButton()
 	{
-		SceneManager.LoadScene (SceneManager.GetActiveScene ().buildIndex);
-		PowerUps.gotSpeed = false;
-		PowerUps.gotNoBounce = false;
-		PowerUps.gotGhost = false;
-		shootCounter = 0;
-		Player.amountOfPaint = 0;
+		startFadingNow = true;
+		replayLevel = true;
 	}
 
 	public void NextButton()
 	{
-		SceneManager.LoadScene (SceneManager.GetActiveScene ().buildIndex + 1);
-		PowerUps.gotSpeed = false;
-		PowerUps.gotNoBounce = false;
-		PowerUps.gotGhost = false;
-		PowerUps.speedPowerUpShots = 0;
-		PowerUps.noBouncePowerUpShots = 0;
-		PowerUps.ghostPowerUpShots = 0;
-		shootCounter = 0;
-		Player.amountOfPaint = 0;
+		startFadingNow = true;
+		nextLevel = true;
 	}
 
 	public void MenuButton()
 	{
-		SceneManager.LoadScene (sceneBuildIndex:1);
-		PowerUps.gotSpeed = false;
-		PowerUps.gotNoBounce = false;
-		PowerUps.gotGhost = false;
-		PowerUps.speedPowerUpShots = 0;
-		PowerUps.noBouncePowerUpShots = 0;
-		PowerUps.ghostPowerUpShots = 0;
-		shootCounter = 0;
-		Player.amountOfPaint = 0;
+		startFadingNow = true;
+		toWorld = true;
+	}
+
+	void ClickedOnButton()
+	{
+		totalScreen.enabled = false;
+		scoreScreen.enabled = false;
+		screenFader.GetComponent<ScreenFade> ().FadeIn ();
+
+		if (ScreenFade.fadeInIsOver == true) 
+		{
+			if (replayLevel == true) 
+			{
+				PowerUps.gotSpeed = false;
+				PowerUps.gotNoBounce = false;
+				PowerUps.gotGhost = false;
+				shootCounter = 0;
+				Player.amountOfPaint = 0;
+				SceneManager.LoadScene (SceneManager.GetActiveScene ().buildIndex);
+			}
+
+			if (nextLevel == true) 
+			{
+				PowerUps.gotSpeed = false;
+				PowerUps.gotNoBounce = false;
+				PowerUps.gotGhost = false;
+				PowerUps.speedPowerUpShots = 0;
+				PowerUps.noBouncePowerUpShots = 0;
+				PowerUps.ghostPowerUpShots = 0;
+				shootCounter = 0;
+				Player.amountOfPaint = 0;
+				SceneManager.LoadScene (SceneManager.GetActiveScene ().buildIndex + 1);
+			}
+
+			if (toWorld == true) 
+			{
+				PowerUps.gotSpeed = false;
+				PowerUps.gotNoBounce = false;
+				PowerUps.gotGhost = false;
+				PowerUps.speedPowerUpShots = 0;
+				PowerUps.noBouncePowerUpShots = 0;
+				PowerUps.ghostPowerUpShots = 0;
+				shootCounter = 0;
+				Player.amountOfPaint = 0;
+				SceneManager.LoadScene (sceneBuildIndex: 1);
+			}
+		}
 	}
 }

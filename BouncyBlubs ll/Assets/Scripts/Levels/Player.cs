@@ -235,7 +235,8 @@ public class Player : MonoBehaviour {
 		//if dropPaintNow = true, drop paint, and reduce amountOfPaint
 		if (dropPaintNow == true) 
 		{
-			Instantiate (paint, transform.position, Quaternion.identity);
+			GameObject _paint = Instantiate (paint, transform.position, Quaternion.identity) as GameObject;
+			_paint.transform.parent = GameObject.FindGameObjectWithTag("DroppedPaint").transform;
 			amountOfPaint -= 1;
 		}
 
