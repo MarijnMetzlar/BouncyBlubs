@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class StartLevels : MonoBehaviour {
 
@@ -76,37 +77,37 @@ public class StartLevels : MonoBehaviour {
 	{
 		if (LevelType == 1) 
 		{
-			Application.LoadLevel (3);
+			SceneManager.LoadScene (sceneBuildIndex:3);
 		}
 
 		if (LevelType == 2 && Controls.completedLevel1 == true) 
 		{
-			Application.LoadLevel (4);
+			SceneManager.LoadScene (sceneBuildIndex:4);
 		}
 
 		if (LevelType == 3 && Controls.completedLevel2 == true) 
 		{
-			Application.LoadLevel (5);
+			SceneManager.LoadScene (sceneBuildIndex:5);
 		}
 
 		if (LevelType == 4 && Controls.completedLevel3 == true) 
 		{
-			Application.LoadLevel (6);
+			SceneManager.LoadScene (sceneBuildIndex:6);
 		}
 
 		if (LevelType == 5 && Controls.completedLevel4 == true) 
 		{
-			Application.LoadLevel (7);
+			SceneManager.LoadScene (sceneBuildIndex:7);
 		}
 
 		if (LevelType == 6 && Controls.completedLevel5 == true) 
 		{
-			Application.LoadLevel (8);
+			SceneManager.LoadScene (sceneBuildIndex:8);
 		}
 
 		if (LevelType == 7 && Controls.completedLevel6 == true) 
 		{
-			Application.LoadLevel (9);
+			SceneManager.LoadScene (sceneBuildIndex:9);
 		}
 	}
 }

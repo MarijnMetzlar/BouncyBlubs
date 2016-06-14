@@ -182,7 +182,7 @@ public class Controls : MonoBehaviour {
 	//Canvas Screens inGame
 	public void BackToMain()
 	{
-		Application.LoadLevel (1);
+		SceneManager.LoadScene (sceneBuildIndex:1);
 	}
 
 	public void BackToGame()
@@ -208,17 +208,17 @@ public class Controls : MonoBehaviour {
 					startTimer = false;
 					winningTimer = 1.0f;
 
-					if (Application.loadedLevel == 3) {
+					if (SceneManager.GetActiveScene ().buildIndex == 3) {
 						completedLevel1 = true;
-					} else if (Application.loadedLevel == 4) {
+					} else if (SceneManager.GetActiveScene ().buildIndex == 4) {
 						completedLevel2 = true;
-					} else if (Application.loadedLevel == 5) {
+					} else if (SceneManager.GetActiveScene ().buildIndex == 5) {
 						completedLevel3 = true;
-					} else if (Application.loadedLevel == 6) {
+					} else if (SceneManager.GetActiveScene ().buildIndex == 6) {
 						completedLevel4 = true;
-					} else if (Application.loadedLevel == 7) {
+					} else if (SceneManager.GetActiveScene ().buildIndex == 7) {
 						completedLevel5 = true;
-					} else if (Application.loadedLevel == 8) {
+					} else if (SceneManager.GetActiveScene ().buildIndex == 8) {
 						completedLevel6 = true;
 					}
 				}
@@ -230,7 +230,7 @@ public class Controls : MonoBehaviour {
 
 	public void ReplayButton()
 	{
-		Application.LoadLevel (Application.loadedLevel);
+		SceneManager.LoadScene (SceneManager.GetActiveScene ().buildIndex);
 		PowerUps.gotSpeed = false;
 		PowerUps.gotNoBounce = false;
 		PowerUps.gotGhost = false;
@@ -240,7 +240,7 @@ public class Controls : MonoBehaviour {
 
 	public void NextButton()
 	{
-		Application.LoadLevel (Application.loadedLevel + 1);
+		SceneManager.LoadScene (SceneManager.GetActiveScene ().buildIndex + 1);
 		PowerUps.gotSpeed = false;
 		PowerUps.gotNoBounce = false;
 		PowerUps.gotGhost = false;
@@ -253,7 +253,7 @@ public class Controls : MonoBehaviour {
 
 	public void MenuButton()
 	{
-		Application.LoadLevel (1);
+		SceneManager.LoadScene (sceneBuildIndex:1);
 		PowerUps.gotSpeed = false;
 		PowerUps.gotNoBounce = false;
 		PowerUps.gotGhost = false;
