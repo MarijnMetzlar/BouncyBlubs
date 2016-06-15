@@ -28,8 +28,16 @@ public class Controls : MonoBehaviour {
 	public GameObject theLevel;
 
 	public Canvas scoreScreen;
+<<<<<<< .merge_file_a28156
 	public Canvas quitScreen;
 
+=======
+	public Canvas totalScreen;
+	public Canvas quitScreen;
+
+	public GameObject screenFader;
+
+>>>>>>> .merge_file_a28524
 	public Camera cam;
 	private Vector3 camStartPosition;
 	private Vector2 smoothToSlingPosition;
@@ -38,6 +46,14 @@ public class Controls : MonoBehaviour {
 	private float _timeStartedLerping;
 	private float timeTakenDuringLerp = 2.0f;
 
+<<<<<<< .merge_file_a28156
+=======
+	private bool startFadingNow = false;
+	private bool replayLevel = false;
+	private bool nextLevel = false;
+	private bool toWorld = false;
+
+>>>>>>> .merge_file_a28524
 	//for finding the completedLevels
 	public static bool completedLevel1 = false;
 	public static bool completedLevel2 = false;
@@ -91,6 +107,14 @@ public class Controls : MonoBehaviour {
 			player.GetComponent<SpriteRenderer> ().color = new Color (oldColor.r, oldColor.g, oldColor.b, 1.0f);
 		}
 
+<<<<<<< .merge_file_a28156
+=======
+		if (startFadingNow == true) 
+		{
+			ClickedOnButton ();
+		}
+
+>>>>>>> .merge_file_a28524
 		LerpCamera ();
 		ShowScoreScreen ();
 	}
@@ -203,11 +227,21 @@ public class Controls : MonoBehaviour {
 			winningTimer -= Time.deltaTime;
 			if (winningTimer < 0) {
 				if (score == winningScore) {
+<<<<<<< .merge_file_a28156
 					scoreScreen.GetComponent<Canvas> ().enabled = true;
+=======
+>>>>>>> .merge_file_a28524
 					theLevel.SetActive (false);
 					startTimer = false;
 					winningTimer = 1.0f;
 
+<<<<<<< .merge_file_a28156
+=======
+					if (startFadingNow == false) {
+						scoreScreen.GetComponent<Canvas> ().enabled = true;
+					}
+
+>>>>>>> .merge_file_a28524
 					if (SceneManager.GetActiveScene ().buildIndex == 3) {
 						completedLevel1 = true;
 					} else if (SceneManager.GetActiveScene ().buildIndex == 4) {
@@ -230,16 +264,22 @@ public class Controls : MonoBehaviour {
 
 	public void ReplayButton()
 	{
+<<<<<<< .merge_file_a28156
 		SceneManager.LoadScene (SceneManager.GetActiveScene ().buildIndex);
 		PowerUps.gotSpeed = false;
 		PowerUps.gotNoBounce = false;
 		PowerUps.gotGhost = false;
 		shootCounter = 0;
 		Player.amountOfPaint = 0;
+=======
+		startFadingNow = true;
+		replayLevel = true;
+>>>>>>> .merge_file_a28524
 	}
 
 	public void NextButton()
 	{
+<<<<<<< .merge_file_a28156
 		SceneManager.LoadScene (SceneManager.GetActiveScene ().buildIndex + 1);
 		PowerUps.gotSpeed = false;
 		PowerUps.gotNoBounce = false;
@@ -249,10 +289,15 @@ public class Controls : MonoBehaviour {
 		PowerUps.ghostPowerUpShots = 0;
 		shootCounter = 0;
 		Player.amountOfPaint = 0;
+=======
+		startFadingNow = true;
+		nextLevel = true;
+>>>>>>> .merge_file_a28524
 	}
 
 	public void MenuButton()
 	{
+<<<<<<< .merge_file_a28156
 		SceneManager.LoadScene (sceneBuildIndex:1);
 		PowerUps.gotSpeed = false;
 		PowerUps.gotNoBounce = false;
@@ -262,5 +307,55 @@ public class Controls : MonoBehaviour {
 		PowerUps.ghostPowerUpShots = 0;
 		shootCounter = 0;
 		Player.amountOfPaint = 0;
+=======
+		startFadingNow = true;
+		toWorld = true;
+	}
+
+	void ClickedOnButton()
+	{
+		totalScreen.enabled = false;
+		scoreScreen.enabled = false;
+		screenFader.GetComponent<ScreenFade> ().FadeIn ();
+
+		if (ScreenFade.fadeInIsOver == true) 
+		{
+			if (replayLevel == true) 
+			{
+				PowerUps.gotSpeed = false;
+				PowerUps.gotNoBounce = false;
+				PowerUps.gotGhost = false;
+				shootCounter = 0;
+				Player.amountOfPaint = 0;
+				SceneManager.LoadScene (SceneManager.GetActiveScene ().buildIndex);
+			}
+
+			if (nextLevel == true) 
+			{
+				PowerUps.gotSpeed = false;
+				PowerUps.gotNoBounce = false;
+				PowerUps.gotGhost = false;
+				PowerUps.speedPowerUpShots = 0;
+				PowerUps.noBouncePowerUpShots = 0;
+				PowerUps.ghostPowerUpShots = 0;
+				shootCounter = 0;
+				Player.amountOfPaint = 0;
+				SceneManager.LoadScene (SceneManager.GetActiveScene ().buildIndex + 1);
+			}
+
+			if (toWorld == true) 
+			{
+				PowerUps.gotSpeed = false;
+				PowerUps.gotNoBounce = false;
+				PowerUps.gotGhost = false;
+				PowerUps.speedPowerUpShots = 0;
+				PowerUps.noBouncePowerUpShots = 0;
+				PowerUps.ghostPowerUpShots = 0;
+				shootCounter = 0;
+				Player.amountOfPaint = 0;
+				SceneManager.LoadScene (sceneBuildIndex: 1);
+			}
+		}
+>>>>>>> .merge_file_a28524
 	}
 }

@@ -23,6 +23,14 @@ public class World : MonoBehaviour {
 
 	public GameObject overWorld;
 
+<<<<<<< .merge_file_a29268
+=======
+	public GameObject worldBackGround;
+	private float changeTextureTimer = 0.15f;
+	private int textureNr = 0;
+	public Texture[] backGroundTextures;
+
+>>>>>>> .merge_file_a29296
 	void Start()
 	{
 		if (!referenceCamera) 
@@ -58,6 +66,10 @@ public class World : MonoBehaviour {
 		}
 
 		ClickOnWorlds ();
+<<<<<<< .merge_file_a29268
+=======
+		BackGround ();
+>>>>>>> .merge_file_a29296
 	}
 
 	void OnMouseDrag()
@@ -194,4 +206,23 @@ public class World : MonoBehaviour {
 		overWorld.SetActive (true);
 		itemScreen.GetComponent<Canvas> ().enabled = false;
 	}
+<<<<<<< .merge_file_a29268
+=======
+
+	void BackGround()
+	{
+		changeTextureTimer -= Time.deltaTime;
+		if (changeTextureTimer < 0) 
+		{
+			worldBackGround.GetComponent<Renderer>().material.mainTexture = backGroundTextures [textureNr];
+			textureNr += 1;
+			changeTextureTimer = 0.15f;
+
+			if (textureNr == 10) 
+			{
+				textureNr = 0;
+			}
+		}
+	}
+>>>>>>> .merge_file_a29296
 }
