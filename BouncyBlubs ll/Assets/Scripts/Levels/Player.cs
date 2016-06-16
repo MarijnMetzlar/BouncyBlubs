@@ -235,12 +235,8 @@ public class Player : MonoBehaviour {
 		//if dropPaintNow = true, drop paint, and reduce amountOfPaint
 		if (dropPaintNow == true) 
 		{
-<<<<<<< .merge_file_a28808
-			Instantiate (paint, transform.position, Quaternion.identity);
-=======
 			GameObject _paint = Instantiate (paint, transform.position, Quaternion.identity) as GameObject;
 			_paint.transform.parent = GameObject.FindGameObjectWithTag("DroppedPaint").transform;
->>>>>>> .merge_file_a28836
 			amountOfPaint -= 1;
 		}
 
