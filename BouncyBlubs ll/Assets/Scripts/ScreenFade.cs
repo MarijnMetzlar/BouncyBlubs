@@ -7,8 +7,8 @@ public class ScreenFade : MonoBehaviour {
 	public Canvas UI_Bar;
 	public Canvas UI_inGameScore;
 
-	private float fadeInAlpha = 0.025f;
-	private float fadeOutAlpha = 0.025f;
+	private float fadeInAlpha = 0.0125f;
+	private float fadeOutAlpha = 0.0125f;
 	public bool fadeOutIsOver = false;
 	public static bool fadeInIsOver = false;
 
@@ -36,6 +36,10 @@ public class ScreenFade : MonoBehaviour {
 		_color.a += fadeInAlpha;
 		gameObject.GetComponent<SpriteRenderer>().material.color = _color;
 
+		//fade animation
+		gameObject.GetComponent<Animator>().SetBool("FadeIn", true);
+		gameObject.GetComponent<Animator>().SetBool("FadeOut", false);
+
 		if (_color.a >= 1.0f) 
 		{
 			fadeInIsOver = true;
@@ -48,6 +52,10 @@ public class ScreenFade : MonoBehaviour {
 		Color color = gameObject.GetComponent<SpriteRenderer>().material.color;
 		color.a -= fadeOutAlpha;
 		gameObject.GetComponent<SpriteRenderer>().material.color = color;
+
+		//fade animation
+		gameObject.GetComponent<Animator>().SetBool("FadeIn", false);
+		gameObject.GetComponent<Animator>().SetBool("FadeOut", true);
 
 		if (color.a <= 0.0f) 
 		{
