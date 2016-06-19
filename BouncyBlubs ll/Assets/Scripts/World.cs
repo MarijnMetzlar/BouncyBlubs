@@ -18,7 +18,6 @@ public class World : MonoBehaviour {
 	public Canvas world2Screen;
 	public Canvas world3Screen;
 	public Canvas itemScreen;
-	public Text worldText;
 	public Button lookAtWorld;
 
 	public GameObject overWorld;
@@ -86,19 +85,16 @@ public class World : MonoBehaviour {
 			tutorialWorldScreen.GetComponent<Canvas> ().enabled = true;
 			world2Screen.GetComponent<Canvas> ().enabled = false;
 			world3Screen.GetComponent<Canvas> ().enabled = false;
-			worldText.text = "World 1";
 			break;
 		case "World2":
 			tutorialWorldScreen.GetComponent<Canvas> ().enabled = false;
 			world2Screen.GetComponent<Canvas> ().enabled = true;
 			world3Screen.GetComponent<Canvas> ().enabled = false;
-			worldText.text = "World 2";
 			break;
 		case "World3":
 			tutorialWorldScreen.GetComponent<Canvas> ().enabled = false;
 			world2Screen.GetComponent<Canvas> ().enabled = false;
 			world3Screen.GetComponent<Canvas> ().enabled = true;
-			worldText.text = "World 3";
 			break;
 		default:
 			tutorialWorldScreen.GetComponent<Canvas> ().enabled = false;
@@ -160,10 +156,10 @@ public class World : MonoBehaviour {
 
 		if (rotateToWorld3 == true) 
 		{
-			gameObject.GetComponent<Transform> ().rotation = Quaternion.RotateTowards (transform.rotation, Quaternion.Euler (331.7851f, 183.173f, 118.4165f), step);
+			gameObject.GetComponent<Transform> ().rotation = Quaternion.RotateTowards (transform.rotation, Quaternion.Euler (337.0943f, 198.7154f, 193.9952f), step);
 		}
 
-		if (gameObject.transform.rotation == Quaternion.Euler (331.7851f, 183.173f, 118.4165f)) 
+		if (gameObject.transform.rotation == Quaternion.Euler (337.0943f, 198.7154f, 193.9952f))
 		{
 			rotateToWorld3 = false;
 		}
@@ -181,8 +177,7 @@ public class World : MonoBehaviour {
 
 	public void ZoomWorld3()
 	{
-		Debug.Log ("You clicked world 3");
-		//SceneManager.LoadScene (sceneBuildIndex: 3);
+		SceneManager.LoadScene (sceneBuildIndex: 4);
 	}
 
 	//ItemScreen functions

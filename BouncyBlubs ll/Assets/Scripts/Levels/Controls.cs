@@ -149,11 +149,6 @@ public class Controls : MonoBehaviour {
 			Instantiate (arrow, transform.position, Quaternion.identity);
 		}
 
-		if (startTimer == false) 
-		{
-			startTimer = true;
-		}
-
 		//powerUps
 		if (PowerUps.gotGhost == true) 
 		{
@@ -176,6 +171,11 @@ public class Controls : MonoBehaviour {
 			Destroy(GameObject.FindGameObjectWithTag("Pointer"));
 			Destroy(GameObject.FindGameObjectWithTag("Arrow"));
 			player.GetComponent<Rigidbody2D> ().AddForce ((transform.position - new Vector3( slingPosition.x, slingPosition.y, 0)) * blubSpeed);
+
+			if (startTimer == false) 
+			{
+				startTimer = true;
+			}
 
 			//powerUps
 			if (PowerUps.gotSpeed == true) 

@@ -1,4 +1,8 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/Scenes/Levels/World2/2.4.unity
+=======
+- path: Assets/Scenes/OverWorld.unity
+>>>>>>> f1e0b7642ef0bcada1bbafdd92de26abb0b1301a
   isLoaded: 1
   isActive: 1
