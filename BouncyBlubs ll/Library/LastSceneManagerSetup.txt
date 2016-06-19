@@ -1,12 +1,4 @@
 sceneSetups:
-<<<<<<< HEAD
-<<<<<<< .merge_file_a50628
 - path: Assets/Scenes/Levels/World0/0.1.unity
-=======
-- path: Assets/Scenes/Levels/World2/2.1.unity
->>>>>>> .merge_file_a50760
-=======
-- path: Assets/Scenes/Levels/World0/0.1.unity
->>>>>>> 7d093834b2ab4cff668ea9fd4836e59d8831e565
   isLoaded: 1
   isActive: 1
