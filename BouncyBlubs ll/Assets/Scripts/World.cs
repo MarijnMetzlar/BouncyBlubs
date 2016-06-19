@@ -177,8 +177,7 @@ public class World : MonoBehaviour {
 
 	public void ZoomWorld3()
 	{
-		Debug.Log ("You clicked world 3");
-		//SceneManager.LoadScene (sceneBuildIndex: 3);
+		SceneManager.LoadScene (sceneBuildIndex: 4);
 	}
 
 	//ItemScreen functions
