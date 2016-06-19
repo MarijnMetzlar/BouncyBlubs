@@ -20,11 +20,15 @@ public class Player : MonoBehaviour {
 	public bool wallHit = false;
 	private float wallHitTimer = 0.5f;
 
+	private bool _isTriggered;
 	public static int bounces;
-	public bool _triggered;
+	private bool _triggered;
 
 	private Rigidbody2D rigid;
 	private Animator anim;
+
+	public GameObject splat;
+	private Animator splatAnim;
 
 	private AudioSource allPlayerSounds;
 	private int randomNrBounce;
@@ -55,6 +59,7 @@ public class Player : MonoBehaviour {
 		paint.GetComponent<SpriteRenderer> ().color = Color.white;
 		rigid = GetComponent<Rigidbody2D> ();
 		anim = GetComponent<Animator> ();
+		splatAnim = splat.GetComponent<Animator> ();
 		allPlayerSounds = GetComponent<AudioSource> ();
 		GetHat ();
 	}
@@ -65,6 +70,7 @@ public class Player : MonoBehaviour {
 		Teleport ();
 		LerpPosition ();
 		CharacterAnimations ();
+		Splat ();
 
 		if (wallHit == true) {
 			wallHitTimer -= Time.deltaTime;
@@ -141,6 +147,61 @@ public class Player : MonoBehaviour {
 			hat.GetComponent<SpriteRenderer> ().sprite = wizardHatItem;
 			hat.GetComponent<Transform> ().localPosition = new Vector3 (0.0f, 0.95f, 0.0f);
 			hat.GetComponent<Transform> ().localScale = new Vector3 (1.0f, 1.0f, 1.0f);
+		}
+	}
+
+	void Splat()
+	{
+		if (blubColor == 1) 
+		{
+			if (wallHit == true) 
+			{
+				splatAnim.SetBool ("BlueBounce", wallHit);
+			} 
+
+			else 
+			{
+				splatAnim.SetBool ("BlueBounce", false);
+			}
+		}
+
+		else if (blubColor == 2) 
+		{
+			if (wallHit == true) 
+			{
+				splatAnim.SetBool ("RedBounce", wallHit);
+			} 
+
+			else 
+			{
+				splatAnim.SetBool ("RedBounce", false);
+			}
+		} 
+
+		else if (blubColor == 3) 
+		{
+			if (wallHit == true) 
+			{
+				splatAnim.SetBool ("YellowBounce", wallHit);
+			} 
+
+			else 
+			{
+				splatAnim.SetBool ("YellowBounce", false);
+			}
+		} 
+
+		else if (blubColor == 4) 
+		{
+			if (wallHit == true) 
+			{
+				splatAnim.SetBool ("GreenBounce", wallHit);
+			} 
+
+			else 
+			{
+				splatAnim.SetBool ("GreenBounce", false);
+			}
 		}
 	}
 
@@ -306,6 +367,12 @@ public class Player : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D other)
 	{
+		if (_isTriggered) {
+			_isTriggered = false;
+			return;
+		}
+
+		_isTriggered = true;
 		if (other.gameObject.tag == "BluePaint") 
 		{
 			allPlayerSounds.PlayOneShot (gettingPaint);
