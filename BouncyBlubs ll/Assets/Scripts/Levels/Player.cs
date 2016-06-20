@@ -153,12 +153,16 @@ public class Player : MonoBehaviour {
 	void Splat()
 	{
 		if (blubColor == 1) {
+			splatAnim.SetBool ("GreenBounce", false);
+			splatAnim.SetBool ("RedBounce", false);
+			splatAnim.SetBool ("YellowBounce", false);
+
 			if (wallHit == true) 
 			{
 				splatAnim.SetBool ("BlueBounce", true);
 			} 
 
-			else 
+			else if (wallHit == false)
 			{
 				splatAnim.SetBool ("BlueBounce", false);
 			}
@@ -166,12 +170,16 @@ public class Player : MonoBehaviour {
 
 		else if (blubColor == 2) 
 		{
+			splatAnim.SetBool ("BlueBounce", false);
+			splatAnim.SetBool ("GreenBounce", false);
+			splatAnim.SetBool ("YellowBounce", false);
+
 			if (wallHit == true) 
 			{
 				splatAnim.SetBool ("RedBounce", true);
 			} 
 
-			else 
+			else if (wallHit == false)
 			{
 				splatAnim.SetBool ("RedBounce", false);
 			}
@@ -179,12 +187,16 @@ public class Player : MonoBehaviour {
 
 		else if (blubColor == 3) 
 		{
+			splatAnim.SetBool ("BlueBounce", false);
+			splatAnim.SetBool ("RedBounce", false);
+			splatAnim.SetBool ("GreenBounce", false);
+
 			if (wallHit == true) 
 			{
 				splatAnim.SetBool ("YellowBounce", true);
 			} 
 
-			else 
+			else if (wallHit == false)
 			{
 				splatAnim.SetBool ("YellowBounce", false);
 			}
@@ -193,12 +205,16 @@ public class Player : MonoBehaviour {
 
 		else if (blubColor == 4) 
 		{
+			splatAnim.SetBool ("BlueBounce", false);
+			splatAnim.SetBool ("RedBounce", false);
+			splatAnim.SetBool ("YellowBounce", false);
+
 			if (wallHit == true) 
 			{
 				splatAnim.SetBool ("GreenBounce", true);
 			} 
 
-			else 
+			else if (wallHit == false)
 			{
 				splatAnim.SetBool ("GreenBounce", false);
 			}
